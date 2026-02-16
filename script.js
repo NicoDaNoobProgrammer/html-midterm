@@ -1,7 +1,5 @@
-// Set current year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Revenue counter animation
 function animateCounter() {
     const revenueElement = document.getElementById('revenue');
     let currentValue = 0;
@@ -21,15 +19,12 @@ function animateCounter() {
     }, 20);
 }
 
-// Trigger animation on page load
 window.addEventListener('load', animateCounter);
 
-// Connect action handler
 function connectAction(platform) {
     alert(`🎉 Thanks for your interest!\n\nConnecting via ${platform}...\n\nPlease update this with your actual contact details!`);
 }
 
-// Add scroll animation
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -49,7 +44,6 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Skill tags click handler
 document.querySelectorAll('.skill-tag').forEach(tag => {
     tag.addEventListener('click', function() {
         this.style.transform = 'scale(1.1) rotate(5deg)';
@@ -59,7 +53,6 @@ document.querySelectorAll('.skill-tag').forEach(tag => {
     });
 });
 
-// Fact cards interaction
 document.querySelectorAll('.fact').forEach(fact => {
     fact.addEventListener('click', function() {
         this.style.backgroundColor = '#667eea';
@@ -71,6 +64,5 @@ document.querySelectorAll('.fact').forEach(fact => {
     });
 });
 
-// Console Easter Egg
 console.log('%cWelcome to Nico Paolo Baltazar\'s Portfolio!', 'color: #667eea; font-size: 20px; font-weight: bold;');
 console.log('%c🚀 Six-Figure Entrepreneur | Business Innovator | Success Driven', 'color: #764ba2; font-size: 14px;');
